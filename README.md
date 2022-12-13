@@ -8,5 +8,5 @@ This is the Repo of web design Project
 3. maybe we will use Docker Container 
 
 # About the Project 
-1. at least 4 pages seperated in Project 
+1. at least 4 pages separated in Project 
 2. the main content of project is Wild Life ----> like National Geographic 
