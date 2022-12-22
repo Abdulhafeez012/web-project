@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/home.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <title>Wildy-graphy</title>
+    <link rel="icon" href="../front-end/media/favicon.ico">
+</head>
+<style>
+    * {
+        font-family: 'Sofia';
+    }
+</style>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="./index.html">Wildy-graphy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-evenly">
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">News</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Photographer</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="btn btn-primary" aria -current="page" href="#">LogIn / SignUp</a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mt-5 pt-5 text-center">
+        <!-- elephant -->
+        <div class="row row-cols-2 justify-content-evenly my-4 py-4">
+            <img src="../front-end/media/pexels-pixabay-247431.jpg" alt="elephant" class="col rounded-4" id="images">
+            <p class="col align-self-end pe-5">" Elephants are the largest land mammals on earth and have
+                distinctly
+                massive
+                bodies, large ears, and
+                long
+                trunks. They
+                use their trunks to pick up objects, trumpet warnings, greet other elephants, or suck up water for
+                drinking or bathing,
+                among other uses. Both male and female African elephants grow tusks and each individual can either be
+                left- or
+                right-tusked, and the one they use more is usually smaller because of wear and tear. Elephant tusks
+                serve many purposes. " <br><strong>Author By Jack Edison</strong></p>
+        </div>
+        <!-- lion -->
+        <div class="row row-cols-2 justify-content-evenly my-4 py-4">
+            <p class="col align-self-end pe-5">" The lion is a well-muscled cat with a long body, large head, and short
+                legs. Size and appearance vary considerably
+                between the sexes. The male’s outstanding characteristic is his mane, which varies between different
+                individuals and
+                populations. It may be entirely lacking; it may fringe the face; or it may be full and shaggy, covering
+                the back of the
+                head, neck, and shoulders and continuing onto the throat and chest to join a fringe along the belly. In
+                some lions the
+                mane and fringe are very dark, almost black, giving the cat a majestic appearance. Manes make males look
+                larger and may
+                serve to intimidate rivals or impress prospective mates. A full-grown male is about 1.8–2.1 metres (6–7
+                feet) long,
+                excluding the 1-metre tail; he stands about 1.2 metres high at the shoulder and weighs 170–230 kg
+                (370–500 pounds). The
+                female, or lioness, is smaller, with a body length of 1.5 metres, a shoulder height of 0.9–1.1 metres,
+                and a weight of
+                120–180 kg. The lion’s coat is short and varies in color from buff yellow, orange-brown, or silvery
+                gray to dark brown,
+                with a tuft on the tail tip that is usually darker than the rest of the coat. " <br><strong>Author By
+                    Johnny Deep</strong></p>
+            <img src="../front-end/media/pexels-alexas-fotos-2220336.jpg" alt="elephant" class="col rounded-4"
+                id="images">
+        </div>
+        <!-- turtle -->
+        <div class="row row-cols-2 justify-content-evenly my-4 py-4">
+            <img src="../front-end/media/pexels-jeremy-bishop-2765872.jpg" alt="elephant" class="col rounded-4"
+                id="images">
+            <p class="col align-self-end pe-5">" Turtles are fascinating pets to own, but they are sensitive animals so
+                it is important to learn how to care for them
+                before getting one. Space, light, moisture and food are all important for survival. Understanding these
+                aspects of your
+                pet’s care will help your turtle live a long life." <br><strong>Author By Mack William</strong></p>
+        </div>
+        <!-- Gorilla's -->
+        <div class="row row-cols-2 justify-content-evenly my-4 py-4">
+            <p class="col align-self-end pe-5">" Gorillas are gentle giants and display many human-like behaviors and
+                emotions, such as laughter and sadness. In fact,
+                gorillas share 98.3% of their genetic code with humans, making them our closest cousins after
+                chimpanzees and bonobos.
+                The largest of the great apes, gorillas are stocky animals with broad chests and shoulders, large,
+                human-like hands, and
+                small eyes set into hairless faces. The two gorilla species live in equatorial Africa, separated by
+                about 560 miles of
+                Congo Basin forest. Each has a lowland and upland subspecies. Gorillas live in family groups of usually
+                five to 10, but
+                sometimes two to more than 50, led by a dominant adult male—or silverback—who holds his position for
+                years. The bond
+                between the silverback and his females forms the basis of gorilla social life. Females become sexually
+                mature around
+                seven or eight years old but don’t begin to breed until a couple of years later. Males mature at an even
+                greater age.
+                Once a female begins to breed, she'll likely give birth to only one baby every four to six years and
+                only three or four
+                over her entire lifetime. This low rate of reproduction makes it difficult for gorillas to recover from
+                population
+                declines. Both gorilla species have been decreasing in numbers for decades, and a 2010 United Nations
+                report suggests
+                that they may disappear from large parts of the Congo Basin by the mid-2020s.Gorillas are gentle giants
+                and display many human-like behaviors and emotions, such as laughter and sadness. In fact,
+                gorillas share 98.3% of their genetic code with humans, making them our closest cousins after
+                chimpanzees and bonobos.
+                The largest of the great apes, gorillas are stocky animals with broad chests and shoulders, large,
+                human-like hands, and
+                small eyes set into hairless faces. The two gorilla species live in equatorial Africa, separated by
+                about 560 miles of
+                Congo Basin forest. " <br>
+                <strong>Author By William pepperoni </strong>
+            </p>
+            <img src="../front-end/media/pexels-julia-filirovska-7190227.jpg" alt="elephant" class="col rounded-4"
+                id="images">
+        </div>
+        <!-- mountains -->
+        <div class="row row-cols-2 justify-content-evenly my-4 py-4">
+            <img src="../front-end/media/pexels-eberhard-grossgasteiger-691668.jpg" alt="elephant" class="col rounded-4"
+                id="images">
+            <p class="col align-self-end pe-5">" mountain, landform that rises prominently above its surroundings,
+                generally exhibiting steep slopes, a relatively
+                confined summit area, and considerable local relief. Mountains generally are understood to be larger
+                than hills, but the
+                term has no standardized geological meaning. Very rarely do mountains occur individually. In most cases,
+                they are found
+                in elongated ranges or chains. When an array of such ranges is linked together, it constitutes a
+                mountain belt. For a
+                list of selected mountains of the world, see below." <br><strong>Author By Peer Pose</strong></p>
+        </div>
+    </div>
+</body>
+
+</html>
