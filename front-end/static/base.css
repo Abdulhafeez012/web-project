@@ -1,3 +1,9 @@
-#main-content{
-    background-image: url("../media/pexels-quang-nguyen-vinh-2132180.jpg");
+.header-section{
+    background: linear-gradient(to bottom, rgba(163, 148, 136, 0.8) 0%, rgba(58, 43, 25, 0.8) 100%),url("../media/pexels-andy-vu-3244513.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: 51.5rem;
 }

@@ -13,30 +13,59 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./static/base.css">
-    <title>NaturalPhotograph</title>
+    <title>Natu-graphy</title>
+    <link rel="icon" href="../front-end/media/favicon.ico">
 </head>
 
 <body>
-    <div id="main-content" class="d-flex flex-column justify-content-around">
-        <nav class="container navbar navbar-expand-lg d-flex flex-row">
-            <a class="navbar-brand text-light" href="#">Wild Life</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Natu-graphy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active text-light" href="#">Home</a>
-                    <a class="nav-link active text-light" href="#">Gallery</a>
-                    <a class="nav-link active text-light" href="#">News</a>
-                    <a class="nav-link active text-light" href="#">Photographer</a>
-                    <a class="nav-link active text-light" href="#">LogIn / SignUp</a>
+            <div class="offcanvas offcanvas-end text-bg-secondary" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-evenly">
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">News</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Photographer</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="btn btn-outline-primary" aria -current="page" href="#">LogIn / SignUp</a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-light">Copyright &copy; 2021 - Natu-graphy</div>
                 </div>
             </div>
-        </nav>
-        <div class="d-flex flex-column justify-content-between align-items-center m-5">
-            <p class="text-white-50">Gallery Photograph / <span class="text-black-50"> Wild Life</span></p>
-            <h2 class="text-black-50">Natural Photograph</h2>
+        </div>
+    </nav>
+    <!-- Header -->
+    <div class="header-section">
+        <div
+            class="h-100 container d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
+            <p class="text-white">Gallery Photograph / <span class="text-muted"> Wild Life</span></p>
+            <h2 class="text-white">Natural Photograph</h2>
             <a href="#" class="btn btn-outline-light mt-4">Discover More</a>
         </div>
     </div>
