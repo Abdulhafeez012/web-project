@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/gallery.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <title>Wildy-graphy</title>
+    <link rel="icon" href="../front-end/media/favicon.ico">
+</head>
+<style>
+    * {
+        font-family: 'Sofia';
+    }
+</style>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="./index.html">Wildy-graphy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-evenly">
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">News</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="#">Photographer</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="btn btn-primary" aria -current="page" href="#">LogIn / SignUp</a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Gallery -->
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="./media/pexels-alexas-fotos-2220336.jpg" class=" shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water" id="image1" />
+                    <p>this photo was takeb by Adam Jakobs in the </p>
+    
+                <img src="./media/pexels-andy-vu-3244513.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" id ="img2"/>
+            </div>
+    
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="./media/pexels-frans-van-heerden-624015.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" id = "img3"/>
+    
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+            </div>
+    
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="./media/pexels-eberhard-grossgasteiger-691668.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" id = "img4"/>
+    
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+        </div>
+    </div>
+</body>
