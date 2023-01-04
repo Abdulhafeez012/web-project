@@ -1,6 +1,6 @@
 # Wildy-graphy site 
 ## Branch naming convention :- 
-'page/NAME-OF-THE-PAGE'
+`page/NAME-OF-THE-PAGE`
  
 # What's the technology of this project?
 
