@@ -4,7 +4,7 @@
     margin-top: 100px ;
 }
 #img2{
-    width: 200px ;
+    width: 400px ;
     height:200px ;
 }
 #img3{
@@ -23,5 +23,25 @@
     display: none;
 }
 .img12:hover .img22{
+    display: block;
+}
+
+.d2img2{
+    display: none;
+}
+.himg2:hover .dimg2{
+    display: none;
+}
+.himg2:hover .d2img2{
+    display: block;
+}
+
+.d2img3{
+    display: none;
+}
+.himg3:hover .dimg3{
+    display: none;
+}
+.himg3:hover .d2img3{
     display: block;
 }
