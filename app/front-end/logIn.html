@@ -48,7 +48,7 @@
                             <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+                            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
                         </li>
                         <li class="nav-item p-3">
                             <a class="nav-link active" aria-current="page" href="#">News</a>
@@ -57,7 +57,8 @@
                             <a class="nav-link active" aria-current="page" href="#">Photographer</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="btn btn-primary" aria -current="page" href="#">LogIn / SignUp</a>
+                            <a class="btn btn-primary" aria -current="page" href="./logIn.html">LogIn /
+                                SignUp</a>
                         </li>
                     </ul>
                     <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
@@ -65,13 +66,32 @@
             </div>
         </div>
     </nav>
-    <!-- Header -->
-    <div class="header-section">
-        <div
-            class="h-100 container d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
-            <h5 class="text-white">Gallery Photograph / <span class="text-body"> Wild Life</span></h5>
-            <h1 class="text-white">Natural Photograph</h1>
-            <a href="#" class="btn btn-outline-light mt-4">Discover More</a>
+    <!-- Log In Form -->
+    <div class="h-100 container d-flex flex-column 
+        justify-content-center align-items-center 
+        position-absolute top-50 start-50 translate-middle">
+        <form class="border-bottom border-dark">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+                <div id="password" class="form-text">
+                    Your password must be 8-20 characters long,
+                    contain letters and numbers, and must not contain
+                    spaces, special characters.
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto mb-4">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <div class="d-grid col-3 mx-auto my-3">
+            <p class="fs-3">You Don't Have an account?</p>
+            <a href="#" class="btn btn-primary">Sign Up</a>
         </div>
     </div>
 </body>

@@ -1,5 +1,6 @@
 # Wildy-graphy site 
-This web site about a natural photograph and wild life 
+## Branch naming convention :- 
+`page/NAME-OF-THE-PAGE`
  
 # What's the technology of this project?
 
