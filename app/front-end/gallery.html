@@ -12,7 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/index.css">
+    <link rel="stylesheet" href="./static/gallery.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
     <title>Wildy-graphy</title>
     <link rel="icon" href="../front-end/media/favicon.ico">
 </head>
@@ -48,7 +52,7 @@
                             <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+                            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
                         </li>
                         <li class="nav-item p-3">
                             <a class="nav-link active" aria-current="page" href="#">News</a>
@@ -57,8 +61,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Photographer</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="btn btn-primary" aria -current="page" href="./logIn.html">LogIn /
-                                SignUp</a>
+                            <a class="btn btn-primary" aria -current="page" href="#">LogIn / SignUp</a>
                         </li>
                     </ul>
                     <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
@@ -66,15 +69,46 @@
             </div>
         </div>
     </nav>
-    <!-- Header -->
-    <div class="header-section">
-        <div
-            class="h-100 container d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
-            <h5 class="text-white">Gallery Photograph / <span class="text-body"> Wild Life</span></h5>
-            <h1 class="text-white">Natural Photograph</h1>
-            <a href="#" class="btn btn-outline-light mt-4">Discover More</a>
+    <!-- Gallery -->
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class =  "img12">
+                    <div class = "img11">
+                        <img src="./media/pexels-alexas-fotos-2220336.jpg" class=" shadow-1-strong rounded mb-4"
+                        alt="Lion in Afarica Jungels" id="image1" />
+                        <p> Adam Jakobs </p>
+                    </div>
+                    <div class = "img22">
+                        <img src="./media/pexels-quang-nguyen-vinh-2132180.jpg" class=" shadow-1-strong rounded mb-4"
+                        alt="Lion in Afarica Jungels" id="image1" />
+                        <p> Adam Jakobs </p>
+                    </div>   
+                </div>
+                <img src="./media/pexels-andy-vu-3244513.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" id ="img2"/>
+
+                    <img src="./media/pexels-pok-rie-383494.jpg" 
+                    class="w-100 shadow-1-strong rounded mb-4" alt="cloudy Summit Landscape" id ="img6"/>    
+            </div>
+    
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="./media/pexels-frans-van-heerden-624015.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" id = "img3"/>
+    
+                <img src="media/pexels-pixabay-247431.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"  id = "img5"/>
+                <img src="media/pexels-jeremy-bishop-2765872.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"  id = "img7"/>    
+            </div>
+    
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="./media/pexels-eberhard-grossgasteiger-691668.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" id = "img4"/>
+    
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
         </div>
     </div>
 </body>
-
-</html>
