@@ -21,60 +21,27 @@
         font-family: 'Sofia';
     }
 </style>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+<script>
+    $(function () {
+        $("#NavBar").load("navbar.html");
+    });
+</script>
 
 <body>
-    <!-- NavBar -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand text-white" href="./index.html">Wildy-graphy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body d-flex flex-column justify-content-evenly">
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
-                        <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="#">News</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="#">Photographer</a>
-                        </li>
-                        <li class="nav-item p-3">
-                            <a class="btn btn-primary" aria -current="page" href="./logIn.html">LogIn /
-                                SignUp</a>
-                        </li>
-                    </ul>
-                    <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="NavBar"></div>
     <!-- Header -->
     <div class="header-section">
         <div
             class="h-100 container d-flex flex-column justify-content-center align-items-center position-absolute top-50 start-50 translate-middle">
             <h5 class="text-white">Gallery Photograph / <span class="text-body"> Wild Life</span></h5>
             <h1 class="text-white">Natural Photograph</h1>
-            <a href="#" class="btn btn-outline-light mt-4">Discover More</a>
+            <a href="./gallery.html" class="btn btn-outline-light mt-4">Discover More</a>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/db659913a6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
