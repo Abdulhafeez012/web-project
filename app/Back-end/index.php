@@ -4,6 +4,9 @@ $username = "root";
 $password = "ABD&20160752";
 $dbname = "web_db";
 
+$username = $password = $repeat_password = $name = $photographer_checker = '';
+$username_error = $password_error = $repeat_password_error = '';
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -28,6 +31,23 @@ if ($result){
     }
 }else{
     echo 'Error: ' . mysqli_error($conn);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST['repeat-password'])) {
+        $username = $_POST['username'];
+        $password = $_POST['user-password'];
+        $sql = "SELECT username FROM users";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                if($row == $username){
+
+                }
+            }
+        }
+    }
 }
 $conn->close();
 ?>

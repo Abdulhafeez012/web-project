@@ -39,16 +39,21 @@
             <div class="mb-3">
                 <label for="email" class="form-label">username</label>
                 <input type="email" class="form-control" id="user-name" aria-describedby="emailHelp" name="username">
+                <span class="error">*
+                    <?php echo $username_error;?>
+                </span>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="user-password">
-                <div id="password" class="form-text">
-                    Your password must be 8-20 characters long,
-                    contain letters and numbers, and must not contain
-                    spaces, special characters.
-                </div>
+                <span class="error">*
+                    <?php echo $password_error;?>
+                    <div id="password" class="form-text">
+                        Your password must be 8-20 characters long,
+                        contain letters and numbers, and must not contain
+                        spaces, special characters.
+                    </div>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto mb-4">
                 <input name="confirm" type="submit" class="btn btn-primary" value="Submit" />
@@ -83,27 +88,34 @@
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <input type="text" id="username" class="form-control" name="username" />
-                                <label class="form-label" for="name">Your username</label>
+                                <span class="error">*
+                                    <?php echo $username_error;?>
+                                    <label class="form-label" for="name">Your username</label>
                             </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <input type="password" id="password1" class="form-control" name="Pass1" />
-                                <label class="form-label" for="password1">Password</label>
+                                <span class="error">*
+                                    <?php echo $password_error;?>
+                                    <label class="form-label" for="password1">Password</label>
                             </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="repeat-password" class="form-control" name="Pass2" />
-                                <label class="form-label" for="repeat-password">Repeat your password</label>
+                                <input type="password" id="repeat-password" class="form-control"
+                                    name="repeat-password" />
+                                <span class="error">*
+                                    <?php echo $repeat_password_error;?>
+                                    <label class="form-label" for="repeat-password">Repeat your password</label>
                             </div>
                         </div>
                         <div class="form-check d-flex justify-content-center mb-5">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="term-and-cond" />
-                            <label class="form-check-label" for="term-and-cond">
-                                I agree all statements in <a href="#">Terms of service</a>
+                            <input class="form-check-input me-2" type="checkbox" value="" id="photographer-checker" />
+                            <label class="form-check-label" for="photographer-checker">
+                                I'm a photographer
                             </label>
                         </div>
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
