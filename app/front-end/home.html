@@ -35,6 +35,7 @@
 </script>
 
 <body>
+    <button onclick="topFunction()" id="button" title="Go to top">^</button>
     <div id="NavBar"></div>
     <!-- Main Content -->
     <div class="container mt-5 pt-5 text-center">
@@ -54,7 +55,7 @@
                     accurate information
                     about a wide variety of species. We also feature stunning photographs and videos that bring the wild
                     right to your screen.
-                    <p />
+                </p>
             </div>
         </div>
         <!-- Carousel wrapper -->
@@ -202,6 +203,25 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/db659913a6.js" crossorigin="anonymous"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("button");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+          } else {
+                mybutton.style.display = "none";
+          }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>
