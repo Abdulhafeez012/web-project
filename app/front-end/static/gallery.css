@@ -4,7 +4,7 @@
     margin-top: 100px ;
 }
 #img2{
-    width: 200px ;
+    width: 400px ;
     height:200px ;
 }
 #img3{
@@ -23,5 +23,85 @@
     display: none;
 }
 .img12:hover .img22{
+    display: block;
+}
+
+.d2img2{
+    display: none;
+}
+.himg2:hover .dimg2{
+    display: none;
+}
+.himg2:hover .d2img2{
+    display: block;
+}
+
+.d2img3{
+    display: none;
+}
+.himg3:hover .dimg3{
+    display: none;
+}
+.himg3:hover .d2img3{
+    display: block;
+}
+
+.d2img4{
+    display: none;
+}
+.himg4:hover .dimg4{
+    display: none;
+}
+.himg4:hover .d2img4{
+    display: block;
+}
+
+.d2img5{
+    display: none;
+}
+.himg5:hover .dimg5{
+    display: none;
+}
+.himg5:hover .d2img5{
+    display: block;
+}
+
+.d2img6{
+    display: none;
+}
+.himg6:hover .dimg6{
+    display: none;
+}
+.himg6:hover .d2img6{
+    display: block;
+}
+
+.d2img7{
+    display: none;
+}
+.himg7:hover .dimg7{
+    display: none;
+}
+.himg7:hover .d2img7{
+    display: block;
+}
+
+.d2img8{
+    display: none;
+}
+.himg8:hover .dimg8{
+    display: none;
+}
+.himg8:hover .d2img8{
+    display: block;
+}
+
+.d2img9{
+    display: none;
+}
+.himg9:hover .dimg9{
+    display: none;
+}
+.himg9:hover .d2img9{
     display: block;
 }
