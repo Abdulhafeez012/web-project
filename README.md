@@ -9,5 +9,5 @@
 3. Docker Container 
 
 #some Notice will working on the project
-##To push a large File into repo you can use git fls by enter `git lfs track " *.`THE-EXTENTION-OF-THE-LARGE-FILES` "`
+##To push a large File into repo you can use git fls by enter `git lfs track " *.{THE-EXTENTION-OF-THE-LARGE-FILES} "`
 
