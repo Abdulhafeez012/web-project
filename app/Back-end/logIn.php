@@ -13,7 +13,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <title>Wildy-graphy</title>
-    <link rel="icon" href="../front-end/media/favicon.ico">
+    <link rel="icon" href="/web-project/app/front-end/media/favicon.ico">
 </head>
 <style>
     * {
@@ -25,7 +25,7 @@
     </script>
 <script>
     $(function () {
-        $("#NavBar").load("navbar.html");
+        $("#NavBar").load("../front-end/navbar.html");
     });
 </script>
 
@@ -35,25 +35,17 @@
     <div class="h-100 container d-flex flex-column 
         justify-content-center align-items-center 
         position-absolute top-50 start-50 translate-middle">
-        <form class="border-bottom border-dark" method="POST" action="../Back-end/index.php">
+        <form class="border-bottom border-dark" method="POST" action="./index.php">
+            <div class="alert alert-danger" role="alert" id="error_message">
+                <?php echo $_GET['error_message'] ?>
+            </div>
             <div class="mb-3">
                 <label for="email" class="form-label">username</label>
-                <input type="email" class="form-control" id="user-name" aria-describedby="emailHelp" name="username">
-                <span class="error">*
-                    <?php echo $username_error;?>
-                </span>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <input type="text" class="form-control" id="user-name" aria-describedby="emailHelp" name="username">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="user-password">
-                <span class="error">*
-                    <?php echo $password_error;?>
-                    <div id="password" class="form-text">
-                        Your password must be 8-20 characters long,
-                        contain letters and numbers, and must not contain
-                        spaces, special characters.
-                    </div>
             </div>
             <div class="d-grid gap-2 col-3 mx-auto mb-4">
                 <input name="confirm" type="submit" class="btn btn-primary" value="Submit" />
@@ -88,18 +80,14 @@
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
                                 <input type="text" id="username" class="form-control" name="username" />
-                                <span class="error">*
-                                    <?php echo $username_error;?>
-                                    <label class="form-label" for="name">Your username</label>
+                                <label class="form-label" for="name">Your username</label>
                             </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="password1" class="form-control" name="Pass1" />
-                                <span class="error">*
-                                    <?php echo $password_error;?>
-                                    <label class="form-label" for="password1">Password</label>
+                                <input type="password" id="password1" class="form-control" name="user-password" />
+                                <label class="form-label" for="password1">Password</label>
                             </div>
                         </div>
                         <div class="d-flex flex-row align-items-center mb-4">
@@ -107,13 +95,12 @@
                             <div class="form-outline flex-fill mb-0">
                                 <input type="password" id="repeat-password" class="form-control"
                                     name="repeat-password" />
-                                <span class="error">*
-                                    <?php echo $repeat_password_error;?>
-                                    <label class="form-label" for="repeat-password">Repeat your password</label>
+                                <label class="form-label" for="repeat-password">Repeat your password</label>
                             </div>
                         </div>
                         <div class="form-check d-flex justify-content-center mb-5">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="photographer-checker" />
+                            <input class="form-check-input me-2" type="checkbox" value="" id="photographer-checker"
+                                name="photographer-checker" />
                             <label class="form-check-label" for="photographer-checker">
                                 I'm a photographer
                             </label>
@@ -126,6 +113,12 @@
             </div>
         </div>
     </div>
+    <script>
+        var error = "<?php echo $_GET['error_message'] ?>";
+        if (error == '') {
+            $("#error_message").hide();
+        }
+    </script>
 </body>
 
 </html>
