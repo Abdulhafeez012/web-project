@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2;url=logIn_home.html">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -28,15 +29,62 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
     </script>
-<script>
-    $(function () {
-        $("#NavBar").load("navbar2.html");
-    });
-</script>
 
 <body>
     <button onclick="topFunction()" id="button" title="Go to top">^</button>
-    <div id="NavBar"></div>
+    <!-- NavBar -->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="./index.html">Wildy-graphy</a>
+            <div>
+                <img class="bg-white rounded-pill img-fluid" src="media/21440194611594721608.svg">
+                <p class="text-white mb-0">
+                    <?php
+                    if (isset($_COOKIE['username'])) {
+                        echo "Hi, " . $_COOKIE['username'];
+                    } else {
+                        if (isset($_SESSION['username'])) {
+                            echo "Hi, " . $_SESSION['username'];
+                        } else {
+                            echo "Hi, user";
+                        }
+                    }
+                    ?>
+                </p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Navigation Bar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column justify-content-evenly">
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item p-3">
+                            <a class="btn btn-primary" aria -current="page" href="./logIn.html">LogIn /
+                                SignUp</a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-light">Copyright &copy; 2021 - Wildy-graphy</div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- Main Content -->
     <div class="container mt-5 pt-5 text-center">
         <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
@@ -203,23 +251,27 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/db659913a6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+
     <script>
         // Get the button
         let mybutton = document.getElementById("button");
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
+        window.onscroll = function () { scrollFunction() };
+
         function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
-          } else {
+            } else {
                 mybutton.style.display = "none";
-          }
+            }
         }
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 </body>

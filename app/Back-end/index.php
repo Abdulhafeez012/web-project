@@ -22,9 +22,14 @@ $result = $conn->query($query);
 if ($result->num_rows == 0) {
     $sql = "CREATE DATABASE web_db";
     if ($conn->query($sql) === TRUE) {
-        $sql = "CREATE table users(id int primary key auto_increment, first_name varchar(23),last_name varchar(12),username varchar(343),password varchar(22))";
+        $sql = "CREATE table 
+        users(id int primary key auto_increment, 
+        first_name varchar(23),
+        last_name varchar(12),
+        username varchar(343),
+        user_password varchar(100))";
         if ($conn->query($sql) === TRUE) {
-            $successful_message = "The user was created";
+            $successful_message = "The user table was created";
         } else {
             $error_message = "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -45,25 +50,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             header("Location: logIn.php?error_message=The+user+name+is+already+exists");
-        }
-        if ($password != $repeat_password) {
-            header("Location: logIn.php?error_message=Passwords+don't+match");
+            exit;
         } else {
-            $sql = "INSERT INTO users (first_name, username, password, role_id) VALUES ('$name', '$username', '$password', '$photographer_checker')";
-            if ($conn->query($sql) === TRUE) {
-                if ($photographer_checker == 0) {
-                    setcookie('username', $username, time() + (86400 * 30), "/");
-                    header("Location: home.html");
-                    exit();
-                } else {
-                    session_start();
-                    $_SESSION['username'] = $username;
-                    header("Location: home.html");
+            if ($password != $repeat_password) {
+                header("Location: logIn.php?error_message=Passwords+don't+match");
+                exit;
+            } else {
+                $sql = "INSERT INTO users (first_name, username, user_password, role_id) VALUES ($name, $username, $password, $photographer_checker)";
+                if ($conn->query($sql) === TRUE) {
+                    if ($photographer_checker == 0) {
+                        setcookie('username', $username, time() + (86400 * 30), "/");
+                        header("Location: logIn_home.php");
+                        exit;
+                    } else {
+                        session_start();
+                        $_SESSION['username'] = $username;
+                        header("Location: logIn_home.php");
+                        exit;
+                    }
                 }
             }
         }
     } else {
-        $sql = "SELECT username,password from users where username = '$username' and password = '$password'";
+        $sql = "SELECT username,user_password 
+        from users where 
+        username = '$username' and user_password = '$password'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             $sql = "SELECT role_id from users where username = '$username'";
@@ -71,15 +82,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             while ($row = $result->fetch_assoc()) {
                 if ($row['role_id'] == 0) {
                     setcookie('username', $username, time() + (86400 * 30), "/");
-                    header("Location: home.html");
+                    header("Location: logIn_home.php");
+                    exit;
                 } else {
                     session_start();
                     $_SESSION['username'] = $username;
-                    header("Location: home.html");
+                    header("Location: logIn_home.php");
+                    exit;
                 }
             }
         } else {
             header("Location: logIn.php?error_message=the+username+or+password+incorrect+!!!");
+            exit;
         }
     }
 }
