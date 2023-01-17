@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['user-password'];
     $repeat_password = $_POST['repeat-password'];
     $name = $_POST['Name'];
-    $photographer_checker = $_POST['photographer-checker'];
+    $photographer_checker = $_POST['checker'];
 
     if (!empty($repeat_password)) {
         $sql = "SELECT username FROM users where username = '$username'";
@@ -56,18 +56,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: logIn.php?error_message=Passwords+don't+match");
                 exit;
             } else {
-                $sql = "INSERT INTO users (first_name, username, user_password, role_id) VALUES ($name, $username, $password, $photographer_checker)";
+                $sql = "INSERT INTO users 
+                (first_name, username, user_password, role_id)
+                VALUES ('$name', '$username', '$password', $photographer_checker)";
                 if ($conn->query($sql) === TRUE) {
                     if ($photographer_checker == 0) {
                         setcookie('username', $username, time() + (86400 * 30), "/");
-                        header("Location: logIn_home.php");
+                        header("Location: logIn_home.php?username=$username");
                         exit;
                     } else {
                         session_start();
                         $_SESSION['username'] = $username;
-                        header("Location: logIn_home.php");
+                        header("Location: logIn_home.php?username=$username");
                         exit;
                     }
+                } else {
+                    header("Location: logIn.php?error_message=Error+500+Internal+server+Error");
+                    exit;
                 }
             }
         }
@@ -82,12 +87,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             while ($row = $result->fetch_assoc()) {
                 if ($row['role_id'] == 0) {
                     setcookie('username', $username, time() + (86400 * 30), "/");
-                    header("Location: logIn_home.php");
+                    header("Location: logIn_home.php?username='$username'");
                     exit;
                 } else {
                     session_start();
                     $_SESSION['username'] = $username;
-                    header("Location: logIn_home.php");
+                    header("Location: logIn_home.php?username='$username'");
                     exit;
                 }
             }

@@ -98,12 +98,21 @@
                                 <label class="form-label" for="repeat-password">Repeat your password</label>
                             </div>
                         </div>
-                        <div class="form-check d-flex justify-content-center mb-5">
-                            <input class="form-check-input me-2" type="checkbox" value="" id="photographer-checker"
-                                name="photographer-checker" />
-                            <label class="form-check-label" for="photographer-checker">
-                                I'm a photographer
-                            </label>
+                        <div class="form-check d-flex justify-content-evenly mb-5">
+                            <div>
+                                <input class="form-check-input me-2" type="radio" value="1" id="checker1"
+                                    name="checker" />
+                                <label class="form-check-label" for="checker1">
+                                    I'm a photographer
+                                </label>
+                            </div>
+                            <div>
+                                <input class="form-check-input me-2" type="radio" id="checker2" value="0"
+                                    name="checker" />
+                                <label class="form-check-label" for="checker2">
+                                    I'm not a photographer
+                                </label>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                             <input name="confirm" type="submit" class="btn btn-primary btn-lg" value="Register" />

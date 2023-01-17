@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2;url=logIn_home.html">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -35,21 +34,11 @@
     <!-- NavBar -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand text-white" href="./index.html">Wildy-graphy</a>
+            <a class="navbar-brand text-white" href="/web-project/app/front-end/index.html">Wildy-graphy</a>
             <div>
-                <img class="bg-white rounded-pill img-fluid" src="media/21440194611594721608.svg">
+                <img class="bg-white rounded-pill img-fluid" src="../front-end/media/21440194611594721608.svg">
                 <p class="text-white mb-0">
-                    <?php
-                    if (isset($_COOKIE['username'])) {
-                        echo "Hi, " . $_COOKIE['username'];
-                    } else {
-                        if (isset($_SESSION['username'])) {
-                            echo "Hi, " . $_SESSION['username'];
-                        } else {
-                            echo "Hi, user";
-                        }
-                    }
-                    ?>
+                    <?php echo 'Hi, '; ?> <?php echo $_GET['username'] ?>
                 </p>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -70,13 +59,16 @@
                     </form>
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 mt-5">
                         <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="/web-project/app/Back-end/logIn_home.php">Home</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="/web-project/app/front-end/gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item p-3">
-                            <a class="btn btn-primary" aria -current="page" href="./logIn.html">LogIn /
+                            <a class="btn btn-primary" aria -current="page"
+                                href="/web-project/app/Back-end/logIn.php">LogIn /
                                 SignUp</a>
                         </li>
                     </ul>
