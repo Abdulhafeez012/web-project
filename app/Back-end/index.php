@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "ABD&20160752";
+$username = "?";
+$password = "?";
 $dbname = "web_db";
 
 $repeat_password = $name = $successful_message = '';
