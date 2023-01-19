@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "?";
-$password = "?";
-$dbname = "web_db";
+$username = "?"; #set here the username of database 
+$password = "?"; #set here the password of the username 
+$dbname = "web_db"; #here the name of database use in project
 
 $repeat_password = $name = $successful_message = '';
 
